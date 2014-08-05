@@ -1,0 +1,60 @@
+<style type="text/css">
+    #welcome_robot{
+        width: 300px;height: 100%;margin:0 auto;margin-top: 80px;position: relative;
+    }
+    #welcome_robot>div{
+        position: absolute;
+        border: 5px solid #fff;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 40%;
+    }
+    #r_head{
+        left: 100px;top:0;
+        width: 100px;height: 100px;line-height: 100px;display: none;
+    }
+    #r_hand_left{
+        left: 10px;top:110px;
+        width: 40px;-webkit-transform:rotate(45deg);height: 120px;display: none;
+    }
+    #r_hand_right{
+        right: 10px;top:110px;
+        width: 40px;-webkit-transform:rotate(315deg);height: 120px;display: none;
+    }
+    #r_body{
+        left: 75px;top:110px;
+        width:150px;height: 150px;padding: 10px 5px;display: none;
+    }
+    #r_foot_left{
+        left: 75px;top:260px;-webkit-transform:rotate(30deg);
+        width: 40px;height: 120px;display: none;
+    }
+    #r_foot_right{
+        right: 95px;top:260px;
+        width:40px;height: 120px;display: none;
+    }
+    .w_box{
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 5px;
+        padding: 13px 8px;
+        margin:30px 40px;
+        background-color: #e4eefc;
+    }
+
+</style>
+<div id="jingle_welcome" class="slide">
+    <div class="slideWrapper" style="color: #fff;font-size: 1.5em;text-shadow: 1px 2px 1px rgba(0,0,0,0.5)">
+        <div style="text-align: center; height:1024px;background-color: rgb(97, 179, 81)">
+            <div id="welcome_jingle" style="height: 240px;width: 240px;border-radius: 50%;border: 8px solid #fff;font-size: 30px;font-weight:bold;line-height: 214px;margin: 40px auto">
+                PMW CHART
+            </div>
+            <div style="margin-top: 100px;font-weight: 900;">PMW统计分析系统</div>
+        </div>
+        <div style="text-align: center; height: 1024px; background-color: #E67E22; position: relative;">
+            <div style="margin-top: 150px;font-weight: 900;">将精准的数据提供给管理者，<br />使管理者在有效的时间完成产品效益的估算！</div>
+            <button id="welcome_btn" onclick="Jingle.Welcome.hide()">开始使用</button>
+        </div>
+    </div>
+</div>

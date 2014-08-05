@@ -1,0 +1,46 @@
+<section id="intention_customer" data-transition="slideUp">
+    <header>
+        <nav class="left">
+            <a href="javascript:;" data-bind="click:callBack" data-icon="undo" data-target="back">返回</a>
+        </nav>
+        <h1 class="title">意向客户列表 ( 共<span data-bind="text:totalCount"></span>条 )</h1>
+    </header>
+    <nav class="header-secondary" style="overflow: hidden;">
+        <a href="javaScript:void(0);" data-index="1"  data-bind="click:function(){setTime(1)},css:{active:interval()==1}">最近一周</a>
+        <a href="javaScript:void(0);" data-index="2" data-bind="click:function(){setTime(2)},css:{active:interval()==2}">最近一个月</a>
+        <a href="javaScript:void(0);" data-index="3" data-bind="click:function(){setTime(3)},css:{active:interval()==3}">最近三个月</a>
+        <a href="javaScript:void(0);" data-index="-1" data-bind="click:function(){setTime(-1)},css:{active:interval()==-1}">全部</a>
+    </nav>
+    <nav class="fixed-header" style="overflow: hidden;">
+        <ul class="list">
+            <li class="divider">
+                <div class="grid demo-grid">
+                    <div class="col-3" data-icon="user">姓名</div>
+                    <div class="col-1" data-icon="phone">手机号</div>
+                    <div class="col-2" data-icon="calendar">关注日期</div>
+                    <div class="col-2" data-icon="list">收藏明细</div>
+                </div>
+            </li>
+        </ul>
+</nav>
+    <article class="active" id="up_refresh_article" data-scroll="true">
+        <div class="scrollWrapper">
+            <ul class="list">
+                <!-- ko foreach:customers-->
+                <li>
+                    <div class="grid demo-grid">
+                        <div class="col-3" data-bind="text:customer.name"></div>
+                        <div class="col-1" data-bind="text:customer.phoneNo"></div>
+                        <div class="col-2" data-bind="text:createDateFormat"></div>
+                        <div class="col-2 show_detail">
+                            <a href="javascript:void(0);" class="show_products" data-bind="click:$root.showProducts"><span>产品</span></a>
+                            &nbsp;
+                            <a href="javascript:void(0);" class="show_solutions" data-bind="click:$root.showSolutions"><span>方案</span></a>
+                        </div>
+                      </div>
+                </li>
+                <!-- /ko -->
+            </ul>
+        </div>
+    </article>
+</section>

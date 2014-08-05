@@ -1,0 +1,10 @@
+﻿<div id="aside_container">
+</div>
+<div class="content" data-bind="router:{ }" id="section_container"></div>
+<footer data-bind="visible:showFooter">
+    <a href="#intention_customer" data-icon="user" data-bind="css:{active:router.activeInstruction().config.id==1}"  data-target="link">意向客户</a>
+    <a href="#deal_customer" data-icon="icon contract-2" data-bind="css:{active:router.activeInstruction().config.id==2}"  data-target="link">成交客户</a>
+    <a href="#customer_order" data-icon="icon list" data-bind="css:{active:router.activeInstruction().config.id==3}" data-target="link">客户订单</a>
+    <a href="#sales_analysis" data-icon="icon stats" data-bind="css:{active:router.activeInstruction().config.id==4}" data-target="link">销售分析</a>
+    <a href="javascript:;" id="btn_from_tpl" data-icon="icon cog">系统配置</a>
+</footer>

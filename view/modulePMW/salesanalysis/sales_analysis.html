@@ -1,0 +1,77 @@
+<section id="sales_analysis">
+    <header>
+        <nav class="left">
+            <a href="javascript:;" data-bind="click:callBack" data-icon="previous" data-target="back">返回</a>
+        </nav>
+        <h1 class="title">销售分析</h1>
+    </header>
+    <article class="active" data-scroll="true">
+        <ul class="control-group" id="changeLineType" style="margin:10px 30px;">
+            <li class="active" data-type="1">最近一周</li>
+            <li data-type="2">最近一个月</li>
+            <li data-type="3">最近三个月</li>
+        </ul>
+        <div style="margin-bottom:20px;">
+            <div class="chartTitle">公司产品销售数据</div>
+            <canvas id="line_canvas"></canvas>
+            <div class="midnight-blue"></div>
+            <div class="legend">
+                <div data-icon="stop" style="color: #72caed">关注</div>
+                <div data-icon="stop" style="color: #a6d854">成交</div>
+            </div>
+            <ul class="control-group" style="margin:10px 10px;">
+                <li data-icon="home" class="active" id="slider_prev">
+                    <i class="icon home"></i>最热销售TOP5
+                </li>
+                <li data-icon="bell" id="slider_next">
+                    <i class="icon bell"></i>最热收藏TOP5 
+                </li>
+            </ul>
+            <div id="slider_test" class="slider" style="margin:0px 5px;">
+                <div>
+                    <div style="text-align: center">
+                        <div class="scrollWrapper">
+                            <ul class="list paddlist">
+                                <li class="divider">
+                                    <div class="grid demo-grid">
+                                        <div class="col-2">产品名称</div>
+                                        <div class="col-0">产品单价</div>
+                                    </div>
+                                </li>
+                                <!-- ko foreach:topFiveSales  -->
+                                <li>
+                                    <div class="grid demo-grid">
+                                        <div class="col-2" data-bind="text:name"></div>
+                                        <div class="col-0" data-bind="text:price"></div>
+                                    </div>
+                                </li>
+                                <!-- /ko -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="text-align: center">
+                        <div class="scrollWrapper">
+                            <ul class="list paddlist">
+                                <li class="divider">
+                                    <div class="grid demo-grid">
+                                        <div class="col-2">产品名称</div>
+                                        <div class="col-0">产品单价</div>
+                                    </div>
+                                </li>
+                                <!-- ko foreach:topFiveFavorites  -->
+                                <li>
+                                    <div class="grid demo-grid">
+                                        <div class="col-2" data-bind="text:name"></div>
+                                        <div class="col-0" data-bind="text:price"></div>
+                                    </div>
+                                </li>
+                                <!-- /ko -->
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
